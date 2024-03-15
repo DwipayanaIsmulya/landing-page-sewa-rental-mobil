@@ -39,8 +39,12 @@
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   </head>
   <body>
+    <div class="progress-container" style="position: fixed; top: 0; z-index: 1; width: 100%;
+    background-color: #f1f1f1;">
+      <div id="proBar" class="progress-bar" style="background: #F5011A;
+      width: 0%; height: 5px;"></div>
+    </div>
     <div class="container-fluid bg-body-tertiary px-0">
-
       <!-- Navbar -->
       <nav
         class="navbar navbar-expand-md bg-body-tertiary pt-4"
@@ -49,7 +53,7 @@
         <div class="container">
           <a
             class="navbar-brand"
-            href="./"
+            href="#landing"
             style="width: 100px; height: 34px; background-color: #0d28a6"
           ></a>
           <span
@@ -128,7 +132,7 @@
       <div class="container mt-5">
         <div class="row align-items-center">
           <div class="col-md-6">
-            <h1 class="lh-base fw-bold" style="font-size: 2rem">
+            <h1 class="lh-base fw-bold" style="font-size: 2rem" id="landing">
               Sewa & Rental Mobil Terbaik di kawasan (Lokasimu)
             </h1>
             <p class="mt-4 text-wrap">
@@ -565,16 +569,16 @@
         </div>
         <div class="col-md-2">
           <p>
-            <a class="nav-link fw-bold">Our Services</a>
+            <a href="#service" class="nav-link fw-bold">Our Services</a>
           </p>
           <p>
-            <a class="nav-link fw-bold">Why Us</a>
+            <a href="#whyus" class="nav-link fw-bold">Why Us</a>
           </p>
           <p>
-            <a class="nav-link fw-bold">Testimonial</a>
+            <a href="#testimonial" class="nav-link fw-bold">Testimonial</a>
           </p>
           <p>
-            <a class="nav-link fw-bold">FAQ</a>
+            <a href="#faq" class="nav-link fw-bold">FAQ</a>
           </p>
         </div>
         <div class="col-md-3 mb-3">
@@ -586,7 +590,7 @@
               </a>
             </div>
             <div class="col-2">
-              <a href="">
+              <a href="https://www.instagram.com/_dwiimulya02/">
                 <img src="./assets/icon_instagram.png" alt="" />
               </a>
             </div>
@@ -611,12 +615,26 @@
           <p>Copyright Binar 2022</p>
           <a
             class="nav-link"
-            href="./"
+            href="$#landing"
             style="width: 100px; height: 34px; background-color: #0d28a6"
           ></a>
         </div>
       </div>
     </div>
+
+    <!-- Start ProgressBar JS -->
+    <script>
+      window.onscroll = function() {
+        pageScroll();
+      }
+
+      const pageScroll = () => {
+        let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        let scrolled = (winScroll / height) * 100;
+        document.getElementById("proBar").style.width = scrolled + "%";
+      }
+    </script>
 
     <!-- Start SweetAlert Button -->
     <script type="text/javascript">
@@ -696,3 +714,7 @@
     </script>
   </body>
 </html>
+
+<!-- 
+
+ -->

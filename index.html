@@ -31,9 +31,16 @@
 
     <!-- Style CSS Eksternal -->
     <link rel="stylesheet" href="./styles.css" />
+
+    <!-- AOS CDN Eksternal -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- SweetAlert CDN JS -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   </head>
   <body>
     <div class="container-fluid bg-body-tertiary px-0">
+
       <!-- Navbar -->
       <nav
         class="navbar navbar-expand-md bg-body-tertiary pt-4"
@@ -65,10 +72,10 @@
                 >&times;</a
               >
             </div>
-            <a href="#">Our Services</a>
-            <a href="#">Why Us</a>
-            <a href="#">Testimonial</a>
-            <a href="#">FAQ</a>
+            <a href="#service">Our Services</a>
+            <a href="#whyus">Why Us</a>
+            <a href="#testimonial">Testimonial</a>
+            <a href="#faq">FAQ</a>
             <a href="#">
               <button
                 class="btn"
@@ -78,6 +85,7 @@
                   border-radius: 3px;
                   font-weight: 600;
                 "
+                onclick="SoonButton()"
               >
                 Register
               </button>
@@ -86,16 +94,16 @@
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav ms-auto">
               <li class="nav-item mx-2">
-                <a class="nav-link fw-bold" href="./login.html">Our Services</a>
+                <a class="nav-link fw-bold" href="#service">Our Services</a>
               </li>
               <li class="nav-item mx-2">
-                <a class="nav-link fw-bold" href="./login.html">Why Us</a>
+                <a class="nav-link fw-bold" href="#whyus">Why Us</a>
               </li>
               <li class="nav-item mx-2">
-                <a class="nav-link fw-bold" href="./login.html">Testimonial</a>
+                <a class="nav-link fw-bold" href="#testimonial">Testimonial</a>
               </li>
               <li class="nav-item mx-2">
-                <a class="nav-link fw-bold" href="./login.html">FAQ</a>
+                <a class="nav-link fw-bold" href="#faq">FAQ</a>
               </li>
               <li class="nav-item mx-2">
                 <button
@@ -106,6 +114,7 @@
                     border-radius: 3px;
                     font-weight: 600;
                   "
+                  onclick="SoonButton()"
                 >
                   Register
                 </button>
@@ -114,6 +123,7 @@
           </div>
         </div>
       </nav>
+
       <!-- Landing Content -->
       <div class="container mt-5">
         <div class="row align-items-center">
@@ -134,6 +144,7 @@
                 border-radius: 3px;
                 font-weight: 600;
               "
+              onclick="SoonButton()"
             >
               Mulai Sewa Mobil
             </button>
@@ -149,10 +160,10 @@
     <div class="container" style="margin-top: 100px">
       <div class="row justify-content-center">
         <div class="col-md-5 me-4">
-          <img src="./assets/img_service.png" class="img-fluid" alt="..." />
+          <img src="./assets/img_service.png" class="img-fluid" alt="..." data-aos="fade-in" data-aos-duration="1500" />
         </div>
         <div class="col-md-5 ms-4 pt-4">
-          <h1 class="fw-bold lh-base mb-4" style="font-size: 1.5rem">
+          <h1 id="service" class="fw-bold lh-base mb-4" style="font-size: 1.5rem">
             Best Car Rental for any kind of trip in (Lokasimu)!
           </h1>
           <p>
@@ -162,23 +173,23 @@
             meeting, dll.
           </p>
           <div class="d-flex flex-column mb-2 flex-wrap">
-            <div class="d-flex flex-row pb-3">
+            <div class="d-flex flex-row pb-3" data-aos="fade-left" data-aos-duration="1300">
               <img src="./assets/Group 53.png" alt="" class="img-fluid" />
               <p class="ps-2 mb-0">Sewa Mobil Dengan Supir di Bali 12 Jam</p>
             </div>
-            <div class="d-flex flex-row pb-3">
+            <div class="d-flex flex-row pb-3" data-aos="fade-left" data-aos-duration="1700">
               <img src="./assets/Group 53.png" alt="" />
               <p class="ps-2 mb-0">Sewa Mobil Lepas Kunci di Bali 24 Jam</p>
             </div>
-            <div class="d-flex flex-row pb-3">
+            <div class="d-flex flex-row pb-3" data-aos="fade-left" data-aos-duration="2100">
               <img src="./assets/Group 53.png" alt="" />
               <p class="ps-2 mb-0">Sewa Mobil Jangka Panjang Bulanan</p>
             </div>
-            <div class="d-flex flex-row pb-3">
+            <div class="d-flex flex-row pb-3" data-aos="fade-left" data-aos-duration="2500">
               <img src="./assets/Group 53.png" alt="" />
               <p class="ps-2 mb-0">Gratis Antar - Jemput Mobil di Bandara</p>
             </div>
-            <div class="d-flex flex-row pb-3">
+            <div class="d-flex flex-row pb-3" data-aos="fade-left" data-aos-duration="2900">
               <img src="./assets/Group 53.png" alt="" />
               <p class="ps-2 mb-0">Layanan Airport Transfer / Drop in Out</p>
             </div>
@@ -189,12 +200,12 @@
 
     <!-- Content Why Us -->
     <div class="container" style="margin-top: 100px">
-      <h1 class="fw-bold whyUsContent" style="font-size: 1.5rem">Why Us?</h1>
+      <h1 id="whyus" class="fw-bold whyUsContent" data-aos="fade-in" data-aos-duration="3000" style="font-size: 1.5rem">Why Us?</h1>
       <p class="mt-4 mb-3 whyUsContent">
         Mengapa harus pilih Binar Car Rental?
       </p>
       <div class="row mt-4">
-        <div class="col-md-3 mb-3">
+        <div class="col-md-3 mb-3" data-aos="fade-up" data-aos-duration="1200">
           <div class="card">
             <div class="card-body">
               <img
@@ -212,7 +223,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-3 mb-3">
+        <div class="col-md-3 mb-3" data-aos="fade-up" data-aos-duration="1700">
           <div class="card">
             <div class="card-body">
               <img
@@ -230,7 +241,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-3 mb-3">
+        <div class="col-md-3 mb-3" data-aos="fade-up" data-aos-duration="2200">
           <div class="card">
             <div class="card-body">
               <img
@@ -248,7 +259,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-3 mb-3">
+        <div class="col-md-3 mb-3" data-aos="fade-up" data-aos-duration="2700">
           <div class="card">
             <div class="card-body">
               <img
@@ -271,8 +282,8 @@
 
     <!-- Content Testimonial -->
     <section id="testimonial" style="margin-top: 100px">
-      <div class="container-fluid text-center mt-5 mb-5">
-        <h3 class="fw-bold">Testimonial</h3>
+      <div class="container-fluid text-center mt-5 mb-5" data-aos="zoom-in-up" data-aos-duration="1500">
+        <h3 id="testimonial" class="fw-bold">Testimonial</h3>
         <p class="mb-lg-5">Berbagai review positif dari para pelanggan kami</p>
         <div class="loop owl-carousel owl-theme">
           <div class="item">
@@ -376,7 +387,7 @@
         style="background-color: #0d28a6; border-radius: 15px"
       >
         <div class="col-md-8">
-          <h1 class="fw-bold contentSewaMobil">
+          <h1 id="faq"  class="fw-bold contentSewaMobil">
             Sewa Mobil di (Lokasimu) Sekarang
           </h1>
           <p>
@@ -391,6 +402,7 @@
               border-radius: 3px;
               font-weight: 600;
             "
+            onclick="SoonButton()"
           >
             Mulai Sewa Mobil
           </button>
@@ -401,11 +413,11 @@
     <!-- Content FAQ -->
     <div class="container mt-5 mb-5">
       <div class="row">
-        <div class="col-md-5">
+        <div class="col-md-5" data-aos="fade-up-right" data-aos-duration="2500">
           <h1 class="mb-3 whyUsContent">Frequently Asked Question</h1>
           <p class="whyUsContent">Lorem ipsum dolor sit amet. Lorem, ipsum.</p>
         </div>
-        <div class="col-md-7">
+        <div class="col-md-7" data-aos="fade-up-left" data-aos-duration="3000">
           <div class="accordion" id="accordionExample">
             <div class="accordion-item my-3">
               <h2 class="accordion-header">
@@ -606,13 +618,24 @@
       </div>
     </div>
 
+    <!-- Start SweetAlert Button -->
+    <script type="text/javascript">
+        const SoonButton = () => {
+          swal("Website sedang dalam pengembangan!", {
+            title: "Oops!",
+            buttons: true,
+            timer: 3000,
+            // icon: "error",
+          });
+        }
+    </script>
+
     <!-- Script Bootsrap JS -->
     <script
       src="./js/bootstrap.bundle.min.js"
       integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
       crossorigin="anonymous"
     ></script>
-    <!-- End Script Bootstrap JS -->
 
     <!-- jQuery CDN -->
     <script
@@ -653,6 +676,7 @@
       });
     </script>
     <!-- End Carousel JS -->
+
     <!-- Start SideNav -->
     <script>
       function openNav() {
@@ -662,6 +686,13 @@
       function closeNav() {
         document.getElementById("mySidenav").style.width = "0";
       }
+    </script>
+
+    <!-- AOS CDN JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+      AOS.init();
     </script>
   </body>
 </html>
